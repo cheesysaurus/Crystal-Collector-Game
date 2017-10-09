@@ -78,7 +78,7 @@ $(".crystal-img").on("click", function() {
         wins++;
 
         // alert user
-        confirm("Someone's got a knack for math!\nClick 'OK' to play again.")
+        confirm("Someone's got a math gene!\nClick 'OK' to play again.")
 
         // reset game
         initGame();
@@ -100,15 +100,13 @@ $(".crystal-img").on("click", function() {
     }
 
     // update html display
-    var statsDisplay = $("#stats");
-    var scoreDisplay = $("#score-number");
+    var winLossDisplay = $("#win-loss-div");
+    var totalDisplay = $("#total-number");
 
-    var statsHTML = 
-        "<p>Wins: " + wins + "</p>" +
-        "<p>Losses: " + losses + "</p>";
+    var winLossHTML = "<p>Wins: " + wins + "<br />Losses: " + losses + "</p>";
 
-    statsDisplay.html(statsHTML);
-    scoreDisplay.html(userScore);
+    winLossDisplay.html(winLossHTML);
+    totalDisplay.html(userScore);
 
 
 }); // on click function

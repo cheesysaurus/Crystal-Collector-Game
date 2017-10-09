@@ -3,7 +3,8 @@
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Roboto Condensed", "Montserrat", sans-serif;
+    font-size: 20px;
 }
 
 body::after {
@@ -13,35 +14,70 @@ body::after {
     top: 0;
     left: 0;
     /* https://pixabay.com/p-2025937/?no_redirect */
-    background: url("../images/crystal-background.jpg") no-repeat; 
+    background: url("../images/crystal-background.jpg") no-repeat center center fixed;
     background-size: cover;
     width: 100%;
-    height: 100%;
-    opacity : 0.7;
+    height: 120%;
+    opacity : 0.5;
     z-index: -1;
 }
 
 .container {
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
 h1 {
-    font-size: 45px;
+    font-size: 48px;
     margin-top: 50px;
     font-family:"Lakki Reddy",  "Fascinate Inline", "Zilla Slab Highlight", "Ribeye Marrow", "Berkshire Swash", serif;
 }
 
 #instructions {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
-    margin-bottom: 40px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+    text-align: left;
+    text-justify: inter-word;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.stats-container {
+    margin-bottom: 25px;
+}
+
+#goal-number-div,
+#total-div,
+#win-loss-div {
+    display: inline-block;
+    width: 250px;
+    height: 70px;
+    background: black;
+    color: white;
+    margin-left: 5px;
+}
+
+#goal-number-div {
+    margin-left: 0;
+}
+
+#goal-number-div p,
+#total-div p,
+#win-loss-div p {
+    margin: auto;
+    padding-top: 10px;
 }
 
 #crystals {
     width: 80%;
     margin: auto;
+    margin-bottom: 4px;
 }
 
 img {
@@ -51,12 +87,11 @@ img {
 }
 
 a {
-    width: 100%;
-    text-align: center;
     position: fixed;
-    bottom: 30px;
+    right: 30px;
+    bottom: 20px;
     text-decoration: none;
-    color: rgb(146, 198, 202);
+    color: rgb(158, 212, 221);
     font-size: 14px;
 }
 

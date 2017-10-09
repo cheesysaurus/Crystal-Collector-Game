@@ -20,7 +20,7 @@
         <h1>Welcome to the Crystal Collector!</h1>
 
         <div id="instructions">
-            <p>How to play:</p>
+            <h2>How to play:</h2>
 
             <p>You will be given a random number at the start of the game.</p>
 
@@ -33,24 +33,26 @@
             <p>Are you up for the challenge? If so, click on a crystal to start playing!</p>
         </div>
 
-        <div id="goal-number-div">
-            <p>Reach this number: <span id="goal-number"></span></p>
-        </div>
+        <div class="stats-container">
+            <div id="goal-number-div">
+                <p>Reach this number: <br /><span id="goal-number"></span></p>
+            </div>
 
-        <div id="stats">
-            <p>Wins: 0</p>
-            <p>Losses: 0</p>
-        </div>
+            <div id="total-div">
+                <p>Your current total is: <br /><span id="total-number">0</span></p>
+            </div>    
+
+            <div id="win-loss-div">
+                <p>Wins: 0<br />
+                Losses: 0</p>
+            </div>
+        </div> <!-- ./stats-container -->
 
         <div id="crystals">
             <img id="crystal-1" class="crystal-img" src="./assets/images/gem1.png" />
             <img id="crystal-2" class="crystal-img" src="./assets/images/gem2.png" />
             <img id="crystal-3" class="crystal-img" src="./assets/images/gem3.png" />
             <img id="crystal-4" class="crystal-img" src="./assets/images/gem4.png" />
-        </div>
-
-        <div id="score-div">
-            <p>Your total score is: <span id="score-number">0</span></p>
         </div>
 
     </div> <!-- ./container -->
