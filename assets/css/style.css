@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+body::after {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* https://pixabay.com/p-2025937/?no_redirect */
+    background: url("../images/crystal-background.jpg") no-repeat; 
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity : 0.7;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 45px;
+    margin-top: 50px;
+    font-family:"Lakki Reddy",  "Fascinate Inline", "Zilla Slab Highlight", "Ribeye Marrow", "Berkshire Swash", serif;
+}
+
+#instructions {
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+#crystals {
+    width: 80%;
+    margin: auto;
+}
+
+img {
+    cursor: pointer;
+    width: 180px;
+    padding: 10px;
+}
+
+a {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    text-decoration: none;
+    color: rgb(146, 198, 202);
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}

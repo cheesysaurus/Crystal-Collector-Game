@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+<head>
+    <meta charset='UTF-8'>
+    <title>Crystal Collector</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Roboto+Condensed:400,700|Slabo+27px|Berkshire+Swash|Lakki+Reddy|Ribeye+Marrow|Zilla+Slab+Highlight:400,700|Fascinate+Inline" rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"> -->
+    <link rel='stylesheet' type='text/css' href='./assets/css/style.css'>
+</head>
+<body>
+
+    <div class="container"> <!-- Everything except image credit -->
+
+        <h1>Welcome to the Crystal Collector!</h1>
+
+        <div id="instructions">
+            <p>How to play:</p>
+
+            <p>You will be given a random number at the start of the game.</p>
+
+            <p>There are four crystals below, each with a different value. By clicking on a  crystal, you will add its specific value to your total score. </p>
+
+            <p>The values of each crystal will stay the same throughout the course of the game, but you won't be able to see them. Also, each time you start a new game, these values will change.</p>
+
+            <p>Your goal is to add up enough numbers to reach the taret number. However, if you go over this number, you lose.</p>
+
+            <p>Are you up for the challenge? If so, click on a crystal to start playing!</p>
+        </div>
+
+        <div id="goal-number-div">
+            <p>Reach this number: <span id="goal-number"></span></p>
+        </div>
+
+        <div id="stats">
+            <p>Wins: 0</p>
+            <p>Losses: 0</p>
+        </div>
+
+        <div id="crystals">
+            <img id="crystal-1" class="crystal-img" src="./assets/images/gem1.png" />
+            <img id="crystal-2" class="crystal-img" src="./assets/images/gem2.png" />
+            <img id="crystal-3" class="crystal-img" src="./assets/images/gem3.png" />
+            <img id="crystal-4" class="crystal-img" src="./assets/images/gem4.png" />
+        </div>
+
+        <div id="score-div">
+            <p>Your total score is: <span id="score-number">0</span></p>
+        </div>
+
+    </div> <!-- ./container -->
+
+
+    <!-- Image Credit -->
+    <a href='http://www.freepik.com/free-vector/watercolor-crystal-gems-set_812146.htm'>Crystals designed by Freepik</a>
+
+
+<!-- jQuery Library (Google) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- JavaScript -->
+<script src="./assets/javascript/game.js"></script>
+</body>
+</html>
