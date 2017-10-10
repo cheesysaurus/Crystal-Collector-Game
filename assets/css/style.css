@@ -7,6 +7,7 @@ body {
     font-size: 20px;
 }
 
+/* to lower opacity of background */
 body::after {
     content : "";
     display: block;
@@ -17,28 +18,30 @@ body::after {
     background: url("../images/crystal-background.jpg") no-repeat center center fixed;
     background-size: cover;
     width: 100%;
-    height: 120%;
+    height: 130%;
     opacity : 0.5;
     z-index: -1;
 }
 
+/* contains everything except image credit link */
 .container {
     text-align: center;
     width: 100%;
     margin: auto;
 }
 
+/* page title */
 h1 {
     font-size: 48px;
-    margin-top: 50px;
+    margin-top: 55px;
     font-family:"Lakki Reddy",  "Fascinate Inline", "Zilla Slab Highlight", "Ribeye Marrow", "Berkshire Swash", serif;
 }
 
 #instructions {
-    max-width: 700px;
+    max-width: 630px;
     margin: auto;
     margin-top: -10px;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
     text-align: left;
     text-justify: inter-word;
 }
@@ -48,8 +51,23 @@ h2 {
     font-size: 20px;
 }
 
+/* contains all 3 stats divs */
 .stats-container {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* flashes for around 3 seconds every 5 wins */
+#motivation {
+    width: 200px;
+    margin-top: -30px;
+    font-size: 18px;
+    background-color: #ffcc25;
+    font-style: italic;
+    position: absolute;
+    right: 500px;
+    top: 16px;
+    display: none;
 }
 
 #goal-number-div,
@@ -74,6 +92,19 @@ h2 {
     padding-top: 10px;
 }
 
+/* flashes win-loss-div to gold every 5 wins */
+.flash {
+    animation: flash 1s ease-out;
+    animation-iteration-count: 2;
+  }
+
+@keyframes flash {
+    0% { background-color: none; }
+    50% { background-color: #ffcc25; }
+    100% { background-color: none; }
+}
+
+/* contains all the crystal images */
 #crystals {
     width: 80%;
     margin: auto;
@@ -86,6 +117,7 @@ img {
     padding: 10px;
 }
 
+/* image credit link */
 a {
     position: fixed;
     right: 30px;

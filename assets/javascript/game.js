@@ -8,6 +8,23 @@ var userScore = 0;
 var goalNumber;
 var crystalValue;
 
+// variables for random alerts win user wins/loses
+var dayOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][(new Date()).getDay()];
+
+var winAlertOptions = ["Whoa, mathe-radical!", "High five, someone's got the math gene!", "I envy your knack for math.", "Are you a descendant of Archimedes? 'Cause you're algebraic!", "Sweet, can you teach me how to math?"];
+
+var loseAlertOptions = ["It's a bust!", "Oof, so close!", "Argh, missed it by that much!", "It's okay, " + dayOfWeek + "'s aren't for mathing."];
+
+// function to generate random alert message when user wins
+function randomWinAlert() {
+    return winAlertOptions[Math.floor(Math.random() * winAlertOptions.length)];
+}
+
+// function to generate random alert message when user loses
+function randomLoseAlert() {
+    return loseAlertOptions[Math.floor(Math.random() * loseAlertOptions.length)];
+}
+
 // function to generate random number between specific range
 function randomIntFromInterval(min,max)
 {
@@ -34,7 +51,7 @@ function initGame() {
     console.log(uniqueValues);
 
     // assign each unique random value to a crystal
-    // i know there is a more efficient way to do this, just not sure what it is
+    // I know there is a more efficient way to do this, just not sure what it is
     $("#crystal-1").attr("data-crystalvalue", uniqueValues[0]);
     $("#crystal-2").attr("data-crystalvalue", uniqueValues[1]);
     $("#crystal-3").attr("data-crystalvalue", uniqueValues[2]);
@@ -53,7 +70,7 @@ function initGame() {
 
     // reset score value to 0
     userScore = 0;
-
+ 
 }
 
 // initialize game
@@ -77,8 +94,18 @@ $(".crystal-img").on("click", function() {
         // increase wins by 1
         wins++;
 
+            // make div blink every 5 wins to motivate user!
+            if ((wins !== 0) && (wins % 5 === 0)) {
+                $("#win-loss-div").addClass("flash");
+                $("#motivation").show().delay(3250).fadeOut();
+            }
+
+            else if ($("#win-loss-div").hasClass("flash") && (wins % 5 !== 0)) {
+                $("#win-loss-div").removeClass("flash");
+            }
+
         // alert user
-        confirm("Someone's got a math gene!\nClick 'OK' to play again.")
+        confirm(randomWinAlert() + "\nClick 'OK' to play again.")
 
         // reset game
         initGame();
@@ -92,7 +119,7 @@ $(".crystal-img").on("click", function() {
         losses++;
 
         // alert user
-        confirm("It's a bust!\nClick 'OK' to try again.")
+        confirm(randomLoseAlert() + "\nClick 'OK' to try again.")
 
         // reset game
         initGame();
