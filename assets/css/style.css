@@ -20,7 +20,7 @@ body::after {
     width: 100%;
     height: 130%;
     opacity : 0.5;
-    z-index: -1;
+    z-index: -2;
 }
 
 /* contains everything except image credit link */
@@ -47,7 +47,8 @@ h1 {
 }
 
 .instructions-highlight {
-    color: rgb(137, 199, 190);
+    /* color: #21a0b1; */
+    color: #8FC7BD;
 }
 
 h2 {
@@ -58,6 +59,10 @@ h2 {
 /* contains all 3 stats divs */
 .stats-container {
     margin-bottom: 30px;
+}
+
+#win-loss-wrapper {
+    display: inline-block;
     position: relative;
 }
 
@@ -68,9 +73,10 @@ h2 {
     font-size: 18px;
     background-color: #ffcc25;
     font-style: italic;
-    position: absolute;
-    right: 500px;
-    top: 16px;
+    margin: auto;
+    margin-top: -60px;
+    margin-bottom: -7px;
+    z-index: 99;
     display: none;
 }
 
@@ -87,6 +93,11 @@ h2 {
 
 #goal-number-div {
     margin-left: 0;
+}
+
+#win-loss-div {
+    position: relative;
+    z-index: -1;
 }
 
 #goal-number-div p,
