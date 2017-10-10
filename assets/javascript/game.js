@@ -13,7 +13,7 @@ var dayOfWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 
 var winAlertOptions = ["Whoa, mathe-radical!", "High five, someone's got the math gene!", "I envy your knack for math.", "Are you a descendant of Archimedes? 'Cause you're algebraic!", "Sweet, can you teach me how to math?"];
 
-var loseAlertOptions = ["It's a bust!", "Oof, so close!", "Argh, missed it by that much!", "It's okay, " + dayOfWeek + "'s aren't for mathing."];
+var loseAlertOptions = ["It's a bust!", "Oof, so close!", "Argh, missed it by that much!", "It's okay, " + dayOfWeek + "'s weren't made for mathing."];
 
 // function to generate random alert message when user wins
 function randomWinAlert() {

@@ -35,6 +35,7 @@ h1 {
     font-size: 48px;
     margin-top: 55px;
     font-family:"Lakki Reddy",  "Fascinate Inline", "Zilla Slab Highlight", "Ribeye Marrow", "Berkshire Swash", serif;
+    text-shadow: 1px 1px 2px rgb(207, 207, 207);
 }
 
 #instructions {
@@ -47,8 +48,12 @@ h1 {
 }
 
 .instructions-highlight {
-    /* color: #21a0b1; */
-    color: #8FC7BD;
+    /* color: #91bcbe; */
+    /* color: #94C8CB; */
+    color: rgb(128, 128, 128);
+    /* background-color: rgb(231, 229, 219); */
+    text-decoration: underline;
+    text-decoration-style: dotted;
 }
 
 h2 {
@@ -66,7 +71,7 @@ h2 {
     position: relative;
 }
 
-/* flashes for around 3 seconds every 5 wins */
+/* appears for around 3 seconds every 5 wins */
 #motivation {
     width: 200px;
     margin-top: -30px;
@@ -132,13 +137,17 @@ img {
     padding: 10px;
 }
 
+img:hover {
+    opacity: 0.8;
+}
+
 /* image credit link */
 a {
     position: fixed;
     right: 30px;
     bottom: 20px;
     text-decoration: none;
-    color: rgb(158, 212, 221);
+    color: rgb(170, 211, 218);
     font-size: 14px;
 }
 
