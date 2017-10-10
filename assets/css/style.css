@@ -50,10 +50,11 @@ h1 {
 .instructions-highlight {
     /* color: #91bcbe; */
     /* color: #94C8CB; */
-    color: rgb(128, 128, 128);
+    /* color: rgb(153, 153, 153); */
     /* background-color: rgb(231, 229, 219); */
     text-decoration: underline;
-    text-decoration-style: dotted;
+    /* text-decoration-color: #1d92c9; */
+    /* text-decoration-style: dotted; */
 }
 
 h2 {
