@@ -148,7 +148,8 @@ a {
     right: 30px;
     bottom: 20px;
     text-decoration: none;
-    color: rgb(170, 211, 218);
+    /* color: rgb(170, 211, 218); */
+    color: rgb(181, 205, 211);
     font-size: 14px;
 }
 
