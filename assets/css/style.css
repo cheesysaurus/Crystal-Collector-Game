@@ -5,13 +5,14 @@
 body {
     font-family: "Roboto Condensed", "Montserrat", sans-serif;
     font-size: 20px;
+    padding-bottom: 30px;
 }
 
 /* to lower opacity of background */
 body::after {
     content : "";
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     /* https://pixabay.com/p-2025937/?no_redirect */
