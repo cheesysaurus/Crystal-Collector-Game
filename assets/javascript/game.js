@@ -94,8 +94,8 @@ $(".crystal-img").on("click", function() {
         // increase wins by 1
         wins++;
 
-            // make div blink every 5 wins to motivate user!
-            if ((wins !== 0) && (wins % 5 === 0)) {
+            // make div blink on first win and every 5 wins to motivate user!
+            if ((wins !== 0) && (wins === 1 || wins % 5 === 0)) {
                 $("#win-loss-div").addClass("flash");
                 $("#motivation").show().delay(3250).fadeOut();
             }
