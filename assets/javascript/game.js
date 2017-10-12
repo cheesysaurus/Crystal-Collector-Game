@@ -31,6 +31,26 @@ function randomIntFromInterval(min,max)
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+// function to play sound when crystal is clicked
+function playCrystalSound() {
+    var crystalSound = $("#crystal-sound")[0];
+    crystalSound.load();
+    crystalSound.cloneNode();
+    crystalSound.play();
+}
+
+// function to play sound when user wins a game
+function playWinSound() {
+    var winSound = $("#level-up")[0];
+    winSound.play();
+}
+
+// function to play sound when user loses
+function playLoseSound() {
+    var loseSound = $("#lose-sound")[0];
+    loseSound.play();
+}
+
 // function to initialize game
 function initGame() {
 
@@ -79,6 +99,9 @@ initGame();
 // when a crystal is clicked
 $(".crystal-img").on("click", function() {
 
+    // play audio
+    playCrystalSound();
+
     // use the "this" keyword to specify that we should be extracting the crystal value of the clicked crystal
     crystalValue = ($(this).attr("data-crystalvalue"));
 
@@ -104,6 +127,9 @@ $(".crystal-img").on("click", function() {
                 $("#win-loss-div").removeClass("flash");
             }
 
+        // play sound
+        playWinSound();
+
         // alert user
         confirm(randomWinAlert() + "\nClick 'OK' to play again.")
 
@@ -117,6 +143,9 @@ $(".crystal-img").on("click", function() {
 
         // increase losses by 1
         losses++;
+
+        // play sound
+        playLoseSound();
 
         // alert user
         confirm(randomLoseAlert() + "\nClick 'OK' to try again.")
