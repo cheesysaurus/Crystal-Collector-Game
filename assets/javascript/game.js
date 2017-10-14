@@ -42,16 +42,12 @@ function playCrystalSound() {
 // function to play sound when user wins a game
 function playWinSound() {
     var winSound = $("#level-up")[0];
-    winSound.load();
-    winSound.cloneNode();
     winSound.play();
 }
 
 // function to play sound when user loses
 function playLoseSound() {
     var loseSound = $("#lose-sound")[0];
-    loseSound.load();
-    loseSound.cloneNode();
     loseSound.play();
 }
 
